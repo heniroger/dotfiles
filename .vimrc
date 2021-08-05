@@ -1,3 +1,4 @@
+:syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
