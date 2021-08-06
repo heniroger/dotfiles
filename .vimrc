@@ -78,3 +78,10 @@ set t_Co=256
 
 " CTags Configuration
 set tags+=tags,tags.vendors
+
+" Tab shortcuts
+nnoremap th  :tabfirst<CR>   
+nnoremap tk  :tabnext<CR>                   
+nnoremap tj  :tabprev<CR>                   
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
