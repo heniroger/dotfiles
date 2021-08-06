@@ -62,6 +62,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" NERDree Confguration 
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
@@ -70,6 +71,10 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeWinSize=42
 
+" Powerline configuration
 set  rtp+=/usr/local/lib/python3.7/dist-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
+
+" CTags Configuration
+set tags+=tags,tags.vendors
