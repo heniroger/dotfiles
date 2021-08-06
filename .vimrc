@@ -1,4 +1,8 @@
 :syntax on
+set number                                                                                                    
+set tabstop=4                                                                                                 
+set colorcolumn=120 
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -25,6 +29,10 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'universal-ctags/ctags'
 
+" Plugin only for PHP development
+" See documentation at https://github.com/arnaud-lb/vim-php-namespace
+Plugin 'arnaud-lb/vim-php-namespace'
+
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -34,7 +42,7 @@ Plugin 'universal-ctags/ctags'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}'arnaud-lb/vim-php-namespace'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
