@@ -1,7 +1,13 @@
 :syntax on
-set number                                                                                                    
-set tabstop=4                                                                                                 
-set colorcolumn=120 
+set number
+set colorcolumn=120
+set backspace=indent,eol,start
+set softtabstop=0 noexpandtab
+set shiftwidth=4
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set autoindent
+
+
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -24,14 +30,29 @@ Plugin 'prettier/vim-prettier'
 Plugin 'preservim/nerdtree'
 Plugin 'vim-vdebug/vdebug'
 Plugin 'airblade/vim-gitgutter'
+"Plugin 'tpope/vim-fugitive'
 "Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'universal-ctags/ctags'
 
+" Color and Theme 
+Plugin 'nlknguyen/papercolor-theme'
+Plugin 'blueshirts/darcula'
+
+" GraphQl
+Plugin 'jparise/vim-graphql'
+" Parenthesis, accolade,xml surround
+Plugin 'tpope/vim-surround'
+
 " Plugin only for PHP development
 " See documentation at https://github.com/arnaud-lb/vim-php-namespace
 Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'lepture/vim-jinja' " Twig
+Plugin 'othree/html5.vim'
+
+" All Language snippets
+Plugin 'sheerun/vim-polyglot'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -85,3 +106,26 @@ nnoremap tk  :tabnext<CR>
 nnoremap tj  :tabprev<CR>                   
 nnoremap tl  :tablast<CR>
 nnoremap tt  :tabedit<Space>
+
+
+" PHP configuration 
+"sql completion in PHP
+let php_sql_query=1   
+" Html completion in PHP                                                                                     
+let php_htmlInStrings=1
+
+let g:php_namespace_sort_after_insert = 1
+
+
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUse()<CR>
+autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>
+
+syntax enable
+set background=dark
+colorscheme darcula
