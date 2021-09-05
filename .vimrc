@@ -59,7 +59,7 @@ Plugin 'lepture/vim-jinja' " Twig
 Plugin 'othree/html5.vim'
 
 " All Language snippets
-'Plugin 'sheerun/vim-polyglot'
+"Plugin 'sheerun/vim-polyglot'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
